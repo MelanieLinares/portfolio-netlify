@@ -5,7 +5,7 @@ import { ArticlePostTemplate } from '../../templates/article-post'
 const ArticlePostPreview = ({ entry, widgetFor }) => {
   const tags = entry.getIn(['data', 'tags'])
   return (
-    <BArticlePostTemplate
+    <ArticlePostTemplate
       content={widgetFor('body')}
       description={entry.getIn(['data', 'description'])}
       tags={tags && tags.toJS()}
