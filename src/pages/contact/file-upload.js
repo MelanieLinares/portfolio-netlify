@@ -1,4 +1,4 @@
-import React from 'react'
+mport React from 'react'
 import { navigate } from 'gatsby-link'
 import Layout from '../../components/Layout'
 
