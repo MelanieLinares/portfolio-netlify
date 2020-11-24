@@ -1,8 +1,8 @@
 ---
 templateKey: work-post
 title: Work Title
-date: 2019-02-02T02:46:55.309Z
-futuredate: 2021-01-12T02:46:55.349Z
+date: 2019-02-01
+futuredate: 2021-01-11
 description: description
 featuredpost: false
 featuredimage: /img/products-grid2.jpg
