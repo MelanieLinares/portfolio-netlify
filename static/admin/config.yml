@@ -22,11 +22,16 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "date", dateFormat: "YYYY-MM-DD", "format": "YYYY-MM-DD"}
       - {label: "Publish Future Date", name: "futuredate", widget: "date", dateFormat: "YYYY-MM-DD", "format": "YYYY-MM-DD"}
-      - {label: "Description", name: "description", widget: "text"}
+      - {label: "url", name: "url", widget: "text"}
       - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
       - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
+      
+      - {label: "Months"
+        name: "duration"
+        widget: "select"
+        options: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "24"]}
       
   - name: "articles"
     label: "Articles"

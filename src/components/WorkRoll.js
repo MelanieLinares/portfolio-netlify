@@ -29,20 +29,24 @@ class WorkRoll extends React.Component {
                       />
                     </div>
                   ) : null}
+                  <p>{post.frontmatter.tags}</p>
+<ul className="taglist">
+                  {tags.map((tag) => (
+                    <li key={tag + `tag`}>
+                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                    </li>
+                  ))}
+                </ul>
                   <p className="post-meta column is-8">
                     <Link
                       className="title has-text-primary is-size-4"
                       to={post.fields.slug}
                     >
                       {post.frontmatter.title}
-{post.frontmatter.tags}
                     </Link>
                     <span> &bull; </span>
                     <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
-                    </span>
-                    <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.futuredate}
+                      {post.frontmatter.date} - {post.frontmatter.futuredate}
                     </span>
                   </p>
                 </header>
