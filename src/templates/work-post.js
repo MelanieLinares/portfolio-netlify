@@ -26,7 +26,6 @@ export const WorkPostTemplate = ({
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
-//            <p>{url}</p>
             <p>{description}</p>
             <PostContent content={content} />
             {tags && tags.length ? (
@@ -51,7 +50,6 @@ export const WorkPostTemplate = ({
 WorkPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
-//  url: PropTypes.string,
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
@@ -65,15 +63,10 @@ const WorkPost = ({ data }) => {
       <WorkPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
-//        url={post.frontmatter.url}
       description={post.frontmatter.description}
         helmet={
           <Helmet titleTemplate="%s | Work">
             <title>{`${post.frontmatter.title}`}</title>
-//            <meta
-//              name="url"
-//              content={`${post.frontmatter.url}`}
-//            />
             <meta
               name="description"
               content={`${post.frontmatter.description}`}
