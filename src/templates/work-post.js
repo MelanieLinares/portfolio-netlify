@@ -9,7 +9,6 @@ import Content, { HTMLContent } from '../components/Content'
 export const WorkPostTemplate = ({
   content,
   contentComponent,
-  //url,
   description,
   tags,
   title,
@@ -96,7 +95,6 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM, YYYY")
         title
-        //url
         description
         tags
       }
