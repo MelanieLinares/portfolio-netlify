@@ -9,7 +9,8 @@ import Content, { HTMLContent } from '../components/Content'
 export const WorkPostTemplate = ({
   content,
   contentComponent,
-  url,
+  //url,
+  description,
   tags,
   title,
   helmet,
@@ -25,7 +26,8 @@ export const WorkPostTemplate = ({
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
-            <p>{url}</p>
+//            <p>{url}</p>
+            <p>{description}</p>
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
@@ -49,7 +51,8 @@ export const WorkPostTemplate = ({
 WorkPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
-  url: PropTypes.string,
+//  url: PropTypes.string,
+  description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
 }
@@ -62,13 +65,18 @@ const WorkPost = ({ data }) => {
       <WorkPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
-        url={post.frontmatter.yrl}
+//        url={post.frontmatter.url}
+      description={post.frontmatter.description}
         helmet={
           <Helmet titleTemplate="%s | Work">
             <title>{`${post.frontmatter.title}`}</title>
+//            <meta
+//              name="url"
+//              content={`${post.frontmatter.url}`}
+//            />
             <meta
-              name="url"
-              content={`${post.frontmatter.url}`}
+              name="description"
+              content={`${post.frontmatter.description}`}
             />
           </Helmet>
         }
@@ -95,7 +103,8 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM, YYYY")
         title
-        url
+        //url
+        description
         tags
       }
     }
