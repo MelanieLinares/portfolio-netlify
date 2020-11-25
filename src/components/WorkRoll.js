@@ -35,6 +35,7 @@ class WorkRoll extends React.Component {
                       to={post.fields.slug}
                     >
                       {post.frontmatter.title}
+{post.frontmatter.tags}
                     </Link>
                     <span> &bull; </span>
                     <span className="subtitle is-size-5 is-block">
@@ -78,6 +79,7 @@ export default () => (
               }
               frontmatter {
                 title
+                tags
                 templateKey
                 date(formatString: "MMMM, YYYY")
                 futuredate(formatString: "MMMM, YYYY")
