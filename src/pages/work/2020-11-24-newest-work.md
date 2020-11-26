@@ -6,6 +6,7 @@ futuredate: 2021-01-10
 description: test description
 urllink: www.google.com
 featuredpost: false
+outofdatepost: false
 featuredimage: /img/blog-index.jpg
 tags:
   - test

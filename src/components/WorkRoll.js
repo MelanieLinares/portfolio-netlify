@@ -43,11 +43,14 @@ class WorkRoll extends React.Component {
 
 
                     <Link
-                      className="title has-text-primary is-size-4"
+                      className="title url-link has-text-primary is-size-4"
                       to={post.frontmatter.urllink}
                     >
-                      {post.frontmatter.urllink}
+                      View Live
                     </Link>
+                        <span className={`${post.frontmatter.outofdatepost ? 'is-outofdate' : ''}`}>
+                            (note: site *may* be out of sync with case study results)
+                        </span>
                     </span>
                   </p>
                 </header>
@@ -90,6 +93,7 @@ export default () => (
                 futuredate(formatString: "MMMM, YYYY")
                 urllink
                 featuredpost
+                outofdatepost
                 featuredimage {
                   childImageSharp {
                     fluid(maxWidth: 120, quality: 100) {

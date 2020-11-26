@@ -6,6 +6,7 @@ futuredate: 2021-01-11
 description: description
 urllink: www.google.com
 featuredpost: false
+outofdatepost: false
 featuredimage: /img/products-grid2.jpg
 tags:
   - test
