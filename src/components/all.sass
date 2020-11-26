@@ -10,6 +10,12 @@ $primary-invert: $kaldi-red-invert
 $body-color: #333
 $black: #2b2523
 
+.navbar-burger 
+    display: inline-flex!important;
+    right: 0;
+    position: absolute!important;
+    top: 0;
+
 .navbar .navbar-menu
   box-shadow:none !important
 
@@ -118,7 +124,7 @@ $menu-label-color: $white-ter
 .url-link + span.is-outofdate
   display: block
 .url-link + span:not(.is-outofdate)
-  display: block
+  display: none
 .blog-list-item header
   display: flex;
   margin-bottom: 1em;
@@ -129,11 +135,25 @@ $menu-label-color: $white-ter
 
 @import "~bulma"
 
-
+.has-text-right
+    text-align: rihgt
+#navMenu a:last-of-type
+    border: 5px solid purple
+    display: flex
+.navbar-brand .navbar-item.logo
+    border: 5px solid orange
+    display: none    
+    
 // responsiveness
 +tablet-only
   .blog-list-item .featured-thumbnail
     flex-basis: 50%;
+#navMenu a:last-of-type
+    border: 5px solid red
+    display: none
+.navbar-brand .navbar-item.logo
+    border: 5px solid yellow
+    display: flex 
 
 +mobile
   .blog-list-item header
@@ -142,3 +162,9 @@ $menu-label-color: $white-ter
     text-align: center;
     max-width: 70%;
     margin: 0 0 1em;
+#navMenu a:last-of-type
+    border: 5px solid green
+    display: none
+.navbar-brand .navbar-item.logo
+    border: 5px solid blue
+    display: flex 
