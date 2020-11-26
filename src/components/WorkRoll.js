@@ -40,6 +40,7 @@ class WorkRoll extends React.Component {
                     <span> &bull; </span>
                     <span className="subtitle is-size-5 is-block">
                       {post.frontmatter.date} - {post.frontmatter.futuredate}
+{post.frontmatter.urllink}
                     </span>
                   </p>
                 </header>
@@ -80,6 +81,7 @@ export default () => (
                 templateKey
                 date(formatString: "MMMM, YYYY")
                 futuredate(formatString: "MMMM, YYYY")
+                urllink
                 featuredpost
                 featuredimage {
                   childImageSharp {

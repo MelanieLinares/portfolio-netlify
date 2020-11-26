@@ -7,7 +7,7 @@ const WorkPostPreview = ({ entry, widgetFor }) => {
   return (
     <WorkPostTemplate
       content={widgetFor('body')}
-      description={entry.getIn(['data', 'description'])}
+      urldescription={entry.getIn(['data', 'urldescription'])}
       tags={tags && tags.toJS()}
       title={entry.getIn(['data', 'title'])}
     />
