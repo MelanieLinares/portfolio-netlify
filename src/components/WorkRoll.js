@@ -40,7 +40,14 @@ class WorkRoll extends React.Component {
                     <span> &bull; </span>
                     <span className="subtitle is-size-5 is-block">
                       {post.frontmatter.date} - {post.frontmatter.futuredate}
-{post.frontmatter.urllink}
+
+
+                    <Link
+                      className="title has-text-primary is-size-4"
+                      to={post.frontmatter.urllink}
+                    >
+                      {post.frontmatter.urllink}
+                    </Link>
                     </span>
                   </p>
                 </header>
