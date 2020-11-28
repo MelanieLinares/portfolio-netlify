@@ -12,6 +12,8 @@ const Navbar = class extends React.Component {
     }
   }
 
+
+
   toggleHamburger = () => {
     // toggle the active boolean in the state
     this.setState(
@@ -35,13 +37,14 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <nav
+        id="topnav"
         className="navbar is-transparent"
         role="navigation"
         aria-label="main-navigation"
       >
         <div className="container">
         
-            <div
+            <button
               className={`navbar-burger burger ${this.state.navBarActiveClass}`}
               data-target="navMenu"
               onClick={() => this.toggleHamburger()}
@@ -49,7 +52,7 @@ const Navbar = class extends React.Component {
               <span />
               <span />
               <span />
-            </div>        
+            </button>        
 
           <div
             id="navMenu"
@@ -83,5 +86,4 @@ const Navbar = class extends React.Component {
     )
   }
 }
-
 export default Navbar
