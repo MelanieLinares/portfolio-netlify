@@ -35,7 +35,7 @@ class WorkRoll extends React.Component {
                       className="title has-text-primary is-size-4"
                       to={post.fields.slug}
                     >
-                      {post.frontmatter.title}
+                      {post.frontmatter.title} {post.frontmatter.subheading}
                     </Link>
                     <span> &bull; </span>
                     <span className="subtitle is-size-5 is-block">
@@ -87,6 +87,7 @@ export default () => (
               }
               frontmatter {
                 title
+                subheading
                 tags
                 templateKey
                 date(formatString: "MMMM, YYYY")

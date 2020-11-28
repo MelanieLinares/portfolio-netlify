@@ -1,7 +1,6 @@
 ---
 templateKey: work-post
-title: Decreasing bounce-rate of Stay Online's existing website through
-  responsive  implementation & re-branding
+title: Decreasing bounce-rate of Stay Online's existing website through responsive  implementation & re-branding
 date: 2019-02-01
 futuredate: 2021-01-11
 description: description
