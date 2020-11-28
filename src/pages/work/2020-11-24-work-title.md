@@ -10,10 +10,10 @@ featuredpost: false
 featuredimage: /img/products-grid2.jpg
 align: left
 durationmonths: 13
-textA: text A hello there
 thisisatest: of Stay Online's existing website through
   responsive  implementation & re-branding
 outofdatepost: false
+textA: text A hello there
 image1:
   alt: A close-up of a paper filter filled with ground coffee
   image: /img/products-grid3.jpg
@@ -36,9 +36,7 @@ the pitch approved.
     <figcaption>This is some great coffee.</figcaption>
 </figure>
 
-
-
 ![alt text](/img/chemex.jpg "title")
 this is more text.
 
-![alt text](/img/chemex.jpg "title")
+![alt text](/img/flavor_wheel.jpg "title")
