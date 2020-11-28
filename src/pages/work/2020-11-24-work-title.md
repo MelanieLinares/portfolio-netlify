@@ -26,10 +26,14 @@ these users through making the web experience accessible to them. Responsive des
 however was not an easy sell to management. Analytics was the push needed to get 
 the pitch approved.
 
-![alt text](/img/blog-index.jpg "title")
+<figure>
+    <img src="/img/blog-index.jpg"
+         alt="ground coffee" title="">
+    <figcaption>This is some great coffee.</figcaption>
+</figure>
 
 
-
-this is more text.
 
 ![alt text](/img/chemex.jpg "title")
+
+this is more text.
