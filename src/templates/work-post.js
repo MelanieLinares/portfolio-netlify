@@ -12,8 +12,6 @@ export const WorkPostTemplate = ({
   description,
   tags,
   title,
-  subheading,
-  months,
   helmet,
 }) => {
   const PostContent = contentComponent || Content
@@ -24,8 +22,8 @@ export const WorkPostTemplate = ({
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2">
-              <b>{title}</b> {subheading}
+            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+              {title}
             </h1>
             <p>{description}</p>
             <PostContent content={content} />
@@ -53,8 +51,6 @@ WorkPostTemplate.propTypes = {
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
-  subheading: PropTypes.string,
-  months: PropTypes.string,
   helmet: PropTypes.object,
 }
 
@@ -98,8 +94,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         date(formatString: "MMMM, YYYY")
-        title,
-        subheading,
+        title
         description
         tags
       }

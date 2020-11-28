@@ -19,8 +19,7 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "work-post"}
-      - {label: "Heading", name: "title", widget: "string"}
-      - {label: "Subheading", name: "subheading", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "date", dateFormat: "YYYY-MM-DD", "format": "YYYY-MM-DD"}
       - {label: "Publish Future Date", name: "futuredate", widget: "date", dateFormat: "YYYY-MM-DD", "format": "YYYY-MM-DD"}
       - {label: "Description", name: "description", widget: "text"}
@@ -30,7 +29,7 @@ collections:
       - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}   
-      - {label: "Duration", name: "durationmonths", widget: "select", options: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"]}
+      - {label: "Align Content", name: "align", widget: "select", options: ["left", "center", "right"]}
 
   - name: "articles"
     label: "Articles"
