@@ -12,11 +12,10 @@ const Footer = class extends React.Component {
   render() {
     return (
       <footer className="footer has-background-black has-text-white-ter">
-        <div className="content has-text-centered">
-            © {today.getFullYear()} Copyright Melanie Linares. All rights reserved.
-        </div>
 
         <div className="content">
+            <p>I am not currently looking for extra projects… <br/>But if you’d like to chat or make my day, feel free to <Link className="" to="/" >reach out to me</Link> or <Link className="" to="/" >buy me a coffee</Link>.</p>
+
                   <ul className="menu-list">
                     <li>
                       <Link className="navbar-item" to="/" >
@@ -43,7 +42,12 @@ const Footer = class extends React.Component {
                        Twitch
                       </Link>
                     </li>
-                  </ul>  
+                  </ul> 
+
+        <p className="content column has-text-centered">
+            © {today.getFullYear()} Copyright Melanie Linares. All rights reserved.
+        </p>
+
         </div>
       </footer>
     )

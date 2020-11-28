@@ -10,6 +10,7 @@ const WorkPostPreview = ({ entry, widgetFor }) => {
       urldescription={entry.getIn(['data', 'urldescription'])}
       tags={tags && tags.toJS()}
       title={entry.getIn(['data', 'title'])}
+      subheading={entry.getIn(['data', 'subheading'])}
     />
   )
 }
