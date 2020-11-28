@@ -18,8 +18,6 @@ tags:
   - re-branding
   - cross-browser compatibility
 ---
-
-
 \[company] is a power cord manufacturer and distributer, known for having the largest 
 U.S. in-stock inventory of power cords and adapters. The legacy e-commerce website, 
 built in 1997, had not grown technologically with \[company]'s users. Mobile users were 
@@ -28,9 +26,9 @@ these users through making the web experience accessible to them. Responsive des
 however was not an easy sell to management. Analytics was the push needed to get 
 the pitch approved.
 
-
-
 ![alt text](/img/blog-index.jpg "title")
+
+
 
 this is more text.
 
