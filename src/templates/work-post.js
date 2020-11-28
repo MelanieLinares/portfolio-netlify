@@ -11,6 +11,7 @@ export const WorkPostTemplate = ({
   contentComponent,
   description,
   thisisatest,
+  textA,
   tags,
   title,
   subheading,
@@ -27,7 +28,9 @@ export const WorkPostTemplate = ({
             <h1 className="title is-size-2">
               <b>{title}</b> {thisisatest}
             </h1>
-            <p>{subheading}</p>            
+            <p>{subheading}</p>   
+            {textA}  
+  
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
@@ -53,6 +56,7 @@ WorkPostTemplate.propTypes = {
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   thisisatest: PropTypes.string,
+  textA: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
 }
@@ -67,6 +71,7 @@ const WorkPost = ({ data }) => {
         contentComponent={HTMLContent}
       description={post.frontmatter.description}
       thisisatest={post.frontmatter.thisisatest}
+      textA={post.frontmatter.textA}
         helmet={
           <Helmet titleTemplate="%s | Work">
             <title>{`${post.frontmatter.title}`}</title>
@@ -102,6 +107,7 @@ export const pageQuery = graphql`
         subheading
         description
         thisisatest
+        textA
         tags
       }
     }

@@ -10,9 +10,13 @@ featuredpost: false
 featuredimage: /img/products-grid2.jpg
 align: left
 durationmonths: 13
+textA: text A hello there
 thisisatest: of Stay Online's existing website through
   responsive  implementation & re-branding
 outofdatepost: false
+image1:
+  alt: A close-up of a paper filter filled with ground coffee
+  image: /img/products-grid3.jpg
 tags:
   - responsive
   - re-branding
@@ -35,5 +39,6 @@ the pitch approved.
 
 
 ![alt text](/img/chemex.jpg "title")
-
 this is more text.
+
+![alt text](/img/chemex.jpg "title")
