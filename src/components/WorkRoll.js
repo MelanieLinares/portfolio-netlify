@@ -39,14 +39,20 @@ class WorkRoll extends React.Component {
                     </li>
                   ))}
                 </ul></p>
-</section>
+
 
                   <p className="post-meta column">
                     <Link
-                      className="title has-text-primary is-size-4"
-                      to={post.fields.slug}
+                      className={`title has-text-primary ${
+                        post.frontmatter.futuredate == null ? 'disabled' : ''
+                      }`}
+
+                      disabled={`${post.frontmatter.futuredate == null ? 	'disabled' : ''}`}
+
+                      to={`${post.frontmatter.futuredate !== null ? 	post.fields.slug : ''}`}
+                    
                     >
-                      {post.frontmatter.title}
+                      {post.frontmatter.title} {post.frontmatter.subheading}
                     </Link>
                     <span> &bull; </span>
                     <span className="subtitle is-size-5 is-block">
@@ -55,15 +61,16 @@ class WorkRoll extends React.Component {
 
                     <Link
                       className="title url-link has-text-primary is-size-4"
-                      to={post.frontmatter.urllink}
+                      to={`${post.frontmatter.futuredate !== null ? post.fields.urllink : ''}`}
                     >
-                      View Live
+                      {post.frontmatter.durationmonths !== null ? 'View Live' : 'Currently under NDA (public mid-2021)' }
                     </Link>
                         <span className={`${post.frontmatter.outofdatepost ? 'is-outofdate' : ''}`}>
                             (note: site *may* be out of sync with case study results)
                         </span>
                     </span>
                   </p>
+                  </section>
                 </header>
               </article>
             </div>
