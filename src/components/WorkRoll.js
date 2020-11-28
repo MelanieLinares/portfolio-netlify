@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
-import { kebabCase } from 'lodash'
-
 class WorkRoll extends React.Component {
   render() {
     const { data } = this.props
@@ -31,17 +29,8 @@ class WorkRoll extends React.Component {
                       />
                     </div>
                   ) : null}
-<section className="column is-8">
-                <p className="column"><ul className="taglist">
-                  {post.frontmatter.tags.map((tag) => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul></p>
-</section>
-
-                  <p className="post-meta column">
+                  <p>{post.frontmatter.tags}</p>
+                  <p className="post-meta column is-8">
                     <Link
                       className="title has-text-primary is-size-4"
                       to={post.fields.slug}
