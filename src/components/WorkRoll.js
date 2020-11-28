@@ -3,6 +3,9 @@ import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
+import { kebabCase } from 'lodash'
+
+
 class WorkRoll extends React.Component {
   render() {
     const { data } = this.props
@@ -29,30 +32,58 @@ class WorkRoll extends React.Component {
                       />
                     </div>
                   ) : null}
-                  <p>{post.frontmatter.tags}</p>
-                  <p className="post-meta column is-8">
+
+<section className="column is-8">
+                <p className="column"><ul className="taglist">
+                  {post.frontmatter.tags.map((tag) => (
+                    <li key={tag + `tag`}>
+                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                    </li>
+                  ))}
+                </ul></p>
+
+
+                  <p className="post-meta column">
                     <Link
-                      className="title has-text-primary is-size-4"
-                      to={post.fields.slug}
+                      className={`title has-text-primary ${
+                        post.frontmatter.futuredate == null ? 'disabled' : ''
+                      }`}
+
+                      disabled={`${post.frontmatter.futuredate == null ? 'disabled' : ''}`}
+
+                      to={`${post.frontmatter.futuredate !== null ? post.fields.slug : ''}`}
+                    
                     >
                       {post.frontmatter.title} {post.frontmatter.subheading}
                     </Link>
                     <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date} - {post.frontmatter.futuredate}
+                    <span className="subtitle is-block">
+                      <p>{post.frontmatter.date} - {post.frontmatter.futuredate == null ? <span>ongoing</span> : <span>{post.frontmatter.futuredate}</span> }
+                      {post.frontmatter.durationmonths !== null ? ' (' : '' }
+                      {post.frontmatter.durationmonths > 12 && post.frontmatter.durationmonths !== null ? '1+' : '' }
+                      {post.frontmatter.durationmonths < 13 && post.frontmatter.durationmonths !== null ? <span>{post.frontmatter.durationmonths}</span> : '' }
+                      {post.frontmatter.durationmonths > 12 && post.frontmatter.durationmonths !== null ? ' year' : '' }
+                      {post.frontmatter.durationmonths < 13 && post.frontmatter.durationmonths !== null ? ' month' : '' }
+                      {post.frontmatter.durationmonths > 1 ? 's' : '' }
+                      {post.frontmatter.durationmonths !== null ? ')' : '' }
+                    </p>
 
+                    <Link                      
+                      className={`itle url-link has-text-primary ${
+                        post.frontmatter.futuredate == null ? 'disabled' : ''
+                      }`}
+                      disabled={`${post.frontmatter.futuredate == null ? 'disabled' : ''}`}
 
-                    <Link
-                      className="title url-link has-text-primary is-size-4"
-                      to={post.frontmatter.urllink}
+                      to={`${post.frontmatter.futuredate !== null ? post.fields.urllink : ''}`}
                     >
-                      View Live
+                      {post.frontmatter.durationmonths !== null ? 'View Live' : 'Currently under NDA (public mid-2021)' }
                     </Link>
                         <span className={`${post.frontmatter.outofdatepost ? 'is-outofdate' : ''}`}>
                             (note: site *may* be out of sync with case study results)
                         </span>
                     </span>
                   </p>
+                  </section>
                 </header>
               </article>
             </div>
@@ -88,6 +119,7 @@ export default () => (
               frontmatter {
                 title
                 subheading
+                durationmonths
                 tags
                 templateKey
                 date(formatString: "MMMM, YYYY")
