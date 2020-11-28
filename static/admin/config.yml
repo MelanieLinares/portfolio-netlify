@@ -25,6 +25,7 @@ collections:
       - {label: "Publish Future Date", name: "futuredate", widget: "date", dateFormat: "YYYY-MM-DD", "format": "YYYY-MM-DD"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Url", name: "urllink", widget: "text"}
+      - {label: "Thisisatest", name: "thisisatest", widget: "text"}
       - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
       - {label: "Out of Date ", name: "outofdatepost", widget: "boolean"}
       - {label: "Featured Image", name: "featuredimage", widget: image}
@@ -58,7 +59,6 @@ collections:
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
           - {label: Heading, name: heading, widget: string}
-          - {label: Subheading, name: subheading, widget: string}
           - {label: Mainpitch, name: mainpitch, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}]}
           - {label: Description, name: description, widget: string}
           - {label: "Client", name: "client", widget: "text"}

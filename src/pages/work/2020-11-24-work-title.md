@@ -1,10 +1,12 @@
 ---
 templateKey: work-post
-title: Decreasing bounce-rate of Stay Online's existing website through responsive  implementation & re-branding
+title: Decreasing bounce-rate
+subheading: test subheading
 date: 2019-02-01
 futuredate: 2021-01-11
 description: description
 urllink: www.google.com
+thisisatest: of Stay Online's existing website through responsive  implementation & re-branding
 featuredpost: false
 outofdatepost: false
 featuredimage: /img/products-grid2.jpg
@@ -12,7 +14,7 @@ tags:
   - responsive
   - re-branding
   - cross-browser compatibility
-align: left
+durationmonths: 13
 ---
 \[company] is a power cord manufacturer and distributer, known for having the largest 
 U.S. in-stock inventory of power cords and adapters. The legacy e-commerce website, 
