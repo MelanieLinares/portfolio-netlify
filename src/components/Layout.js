@@ -57,7 +57,7 @@ const TemplateWrapper = ({ children }) => {
 
 function componentDidMount() {
   console.log("hi");
-  window.addEventListener("resize", function() {
+  // window.addEventListener("resize", function() {
     if (window.matchMedia("(min-width: 1023px)").matches) {
   var prevScrollpos = window.pageYOffset;
   window.onscroll = function() {
@@ -82,19 +82,19 @@ function componentDidMount() {
         prevScrollpos = currentScrollPos;
       }
         }
-  })
-  if (window.matchMedia("(min-width: 1023px)").matches) {
-    var prevScrollpos = window.pageYOffset;
-    window.onscroll = function() {
-      var currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > currentScrollPos) {
-        document.getElementById("topnav").style.top = "0";
-      } else {
-        document.getElementById("topnav").style.top = "-53px";
-      }
-      prevScrollpos = currentScrollPos;
-    }
-      }
+  // })
+  // if (window.matchMedia("(min-width: 1023px)").matches) {
+  //   var prevScrollpos = window.pageYOffset;
+  //   window.onscroll = function() {
+  //     var currentScrollPos = window.pageYOffset;
+  //     if (prevScrollpos > currentScrollPos) {
+  //       document.getElementById("topnav").style.top = "0";
+  //     } else {
+  //       document.getElementById("topnav").style.top = "-53px";
+  //     }
+  //     prevScrollpos = currentScrollPos;
+  //   }
+  //     }
 }
 componentDidMount();
 
