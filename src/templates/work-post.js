@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import Features from '../components/Features'
 
 export const WorkPostTemplate = ({
   content,
@@ -12,6 +13,7 @@ export const WorkPostTemplate = ({
   description,
   thisisatest,
   textA,
+  intro,
   tags,
   title,
   subheading,
@@ -30,6 +32,8 @@ export const WorkPostTemplate = ({
             </h1>
             <p>{subheading}</p>   
             {textA}  
+
+            <Features gridItems={intro.blurbs} />
   
             <PostContent content={content} />
             {tags && tags.length ? (
@@ -57,6 +61,9 @@ WorkPostTemplate.propTypes = {
   description: PropTypes.string,
   thisisatest: PropTypes.string,
   textA: PropTypes.string,
+  intro: PropTypes.shape({
+    blurbs: PropTypes.array,
+  }),
   title: PropTypes.string,
   helmet: PropTypes.object,
 }
@@ -72,6 +79,7 @@ const WorkPost = ({ data }) => {
       description={post.frontmatter.description}
       thisisatest={post.frontmatter.thisisatest}
       textA={post.frontmatter.textA}
+      intro={post.frontmatter.intro}
         helmet={
           <Helmet titleTemplate="%s | Work">
             <title>{`${post.frontmatter.title}`}</title>
@@ -109,6 +117,20 @@ export const pageQuery = graphql`
         thisisatest
         textA
         tags
+        intro {
+          blurbs {
+            image {
+              childImageSharp {
+                fluid(maxWidth: 240, quality: 64) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            text
+          }
+          heading
+          description
+        }
       }
     }
   }
